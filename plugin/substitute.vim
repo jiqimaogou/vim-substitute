@@ -71,9 +71,9 @@ fun! <SID>SubstituteAltSubst(txt, flags, global)
             let len = len - 1
             let mv = mv . left
         endwhile
-        return 'g' . d . d . 's' . d . @" . d . d . a:flags . mv
+        return 'g' . d . d . 's' . d . @" . d . @+ . d . a:flags . mv
     endif
-    return 's' . d . @" . d . d . a:flags . mv 
+    return 's' . d . @" . d . @+ . d . a:flags . mv 
 endfun
 
 fun! <SID>SubstituteVisualAltSubst(txt, flags, global)
